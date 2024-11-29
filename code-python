@@ -22,8 +22,11 @@ def compare_versions(version_current, version_new):
             messagebox.showinfo(f"Phiên bản hiện tại ({version_current}) đã lớn hơn phiên bản mới ({version_new}).")
         else:
             messagebox.showinfo("Đúng Phiên Bản.")
+    except ValueError:
+        messagebox.showerror("Lỗi", "Định dạng phiên bản không hợp lệ.")
+    except Exception as e:
+        messagebox.showerror("Lỗi không xác định", f"Đã xảy ra lỗi: {e}")
 
-# Gọi hàm so sánh
 compare_versions(version_current, version_new)
 
 
