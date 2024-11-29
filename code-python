@@ -17,11 +17,11 @@ def compare_versions(version_current, version_new):
 
         # So sánh từng phần tử của phiên bản
         if new_parts > current_parts:
-            messagebox.showinfo(f"Phiên bản mới ({version_new}) lớn hơn phiên bản hiện tại ({version_current}).")
+            messagebox.showinfo(f"Plants Vs Zombies Dung Hợp", "Phiên bản mới ({version_new}) lớn hơn phiên bản hiện tại ({version_current}).")
         elif new_parts < current_parts:
-            messagebox.showinfo(f"Phiên bản hiện tại ({version_current}) đã lớn hơn phiên bản mới ({version_new}).")
+            messagebox.showinfo(f"Plants Vs Zombies Dung Hợp", "Phiên bản hiện tại ({version_current}) đã lớn hơn phiên bản mới ({version_new}).")
         else:
-            messagebox.showinfo("Đúng Phiên Bản.")
+            messagebox.showinfo("Plants Vs Zombies Dung Hợp", "Đúng Phiên Bản.")
     except ValueError:
         messagebox.showerror("Lỗi", "Định dạng phiên bản không hợp lệ.")
     except Exception as e:
