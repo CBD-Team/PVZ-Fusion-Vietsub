@@ -8,18 +8,15 @@ def compare_versions(version_current, version_new):
 
         # So sánh từng phần tử của phiên bản
         if new_parts > current_parts:
-            messagebox.showinfo(f"Plants Vs Zombies Dung Hợp", "Phiên bản mới ({version_new}) lớn hơn phiên bản hiện tại ({version_current}).")
+            messagebox.showinfo("Plants Vs Zombies Dung Hợp", f"Phiên bản mới ({version_new}) lớn hơn phiên bản hiện tại ({version_current}).")
         elif new_parts < current_parts:
-            messagebox.showinfo(f"Plants Vs Zombies Dung Hợp", "Phiên bản hiện tại ({version_current}) đã lớn hơn phiên bản mới ({version_new}).")
+            messagebox.showinfo("Plants Vs Zombies Dung Hợp", f"Phiên bản hiện tại ({version_current}) đã lớn hơn phiên bản mới ({version_new}).")
         else:
             messagebox.showinfo("Plants Vs Zombies Dung Hợp", "Đúng Phiên Bản.")
     except ValueError:
         messagebox.showerror("Lỗi", "Định dạng phiên bản không hợp lệ.")
     except Exception as e:
         messagebox.showerror("Lỗi không xác định", f"Đã xảy ra lỗi: {e}")
-
-compare_versions(version_current, version_new)
-
 
 # Thay thế Client ID của bạn ở đây
 client_id = '1305854246142476299'
