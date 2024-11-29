@@ -76,34 +76,6 @@ def check_pvz_process():
     while is_pvz_running():
         time.sleep(1)  # Dừng lại một giây trước khi kiểm tra lại
 
-# Tạo giao diện Tkinter
-root = tk.Tk()
-root.title("Thông báo")
-root.geometry("1000x630")
-
-# Thiết lập icon cửa sổ (ICO)
-try:
-    root.iconbitmap("icon.ico")  # Đảm bảo rằng icon.ico tồn tại trong thư mục hiện tại
-except Exception as e:
-    print(f"Lỗi khi thiết lập icon: {e}")
-
-# Hiển thị hình ảnh
-try:
-    image_path = "./image.png"  # Đảm bảo rằng hình ảnh tồn tại trong thư mục hiện tại
-    image = Image.open(image_path)
-    image = image.resize((960, 540), Image.LANCZOS)
-    photo = ImageTk.PhotoImage(image)
-    label = tk.Label(root, image=photo)
-    label.pack(pady=10)
-except Exception as e:
-    print(f"Lỗi khi tải ảnh: {e}")
-
-# Nút bấm "Tiếp Tục"
-button = tk.Button(root, text="Tiếp Tục", command=open_exe_and_quit)
-button.pack(pady=10)
 
 # So sánh phiên bản sau khi tạo cửa sổ
 compare_versions(version_current, version_new)
-
-# Chạy giao diện Tkinter
-root.mainloop()
